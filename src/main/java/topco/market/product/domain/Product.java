@@ -1,4 +1,4 @@
-package topco.market.product.entities;
+package topco.market.product.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
