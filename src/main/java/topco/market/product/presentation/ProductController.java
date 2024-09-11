@@ -30,7 +30,7 @@ public class ProductController {
 
     @GetMapping("searchByCategory")
     public ResponseEntity<List<Product>> getProductsByCategory(
-            @RequestParam(defaultValue = "", name = "catid") Long categoryId,
+            @RequestParam(defaultValue = "", name = "catid") String categoryId,
             @RequestParam(defaultValue = "0", name = "pgid") int pageId //Page No
     ) {
         List<Product> listOfProducts = listingService.showProductsByCategory(pageId, categoryId);
@@ -39,7 +39,7 @@ public class ProductController {
 
     @GetMapping("searchByBrand")
     public ResponseEntity<List<Product>> getProductsByBrand(
-            @RequestParam(defaultValue = "", name = "bid") Long brandId,
+            @RequestParam(defaultValue = "", name = "bid") String brandId,
             @RequestParam(defaultValue = "0", name = "pgid") int pageId //Page No
     ) {
         List<Product> listOfProducts = listingService.showProductsByBrand(pageId, brandId);

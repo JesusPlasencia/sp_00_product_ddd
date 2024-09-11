@@ -13,12 +13,9 @@ import java.math.BigDecimal;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
     private String name;
     private BigDecimal price;
-
-    // private List<Link> links;
 
     @OneToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "category_id")

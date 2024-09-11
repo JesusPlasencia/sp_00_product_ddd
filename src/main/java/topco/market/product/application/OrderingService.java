@@ -8,11 +8,6 @@ import topco.market.product.infrastructure.ProductRepository;
 @RequiredArgsConstructor
 public class OrderingService {
 
-    private ProductRepository productRepository;
-
-    private String getNextProductNumber() {
-        Long productNumber = productRepository.getProductIdFromSequenceTable();
-        return String.format("%06X", productNumber);
-    }
+    private final ProductRepository productRepository;
 
 }

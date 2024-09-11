@@ -7,15 +7,15 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import topco.market.product.domain.Product;
 
-public interface ProductRepository extends CrudRepository<Product, Long>, PagingAndSortingRepository<Product, Long> {
+public interface ProductRepository extends CrudRepository<Product, String>, PagingAndSortingRepository<Product, String> {
 
     @Query("select next value for S_PRODUCT_NUMBER from DUAL_PRODUCT_NUMBER")
     Long getProductIdFromSequenceTable();
 
     @Query("select p from Product p where p.category.id = ?1")
-    Page<Product> findByCategory(Long categoryId, PageRequest pageRequest);
+    Page<Product> findByCategory(String categoryId, PageRequest pageRequest);
 
     @Query("select p from Product p where p.brand.id = ?1")
-    Page<Product> findByBrand(Long brandId, PageRequest pageRequest);
+    Page<Product> findByBrand(String brandId, PageRequest pageRequest);
 
 }

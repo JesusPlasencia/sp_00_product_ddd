@@ -9,12 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
-import topco.market.product.infrastructure.ProductRepository;
 
 import javax.sql.DataSource;
-
-import java.util.List;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,9 +24,6 @@ class MarketApplicationTests {
 
 	@Autowired
 	DataSource dataSource;
-
-//	@Autowired
-//	ProductRepository productRepository;
 
 	JdbcTemplate jdbcTemplate;
 
