@@ -21,18 +21,19 @@ public class ListingService {
     private final CategoryRepository categoryRepository;
     private final BrandRepository brandRepository;
 
-    public List<Category> showCategories(int pageId) {
-        Page<Category> result = categoryRepository.findAll(
-                PageRequest.of(pageId, 40)
-        );
-        return result.getContent();
+    // CATEGORY
+    public List<Category> showCategories() {
+        return (List<Category>) categoryRepository.findAll();
     }
 
-    public List<Brand> showBrands(int pageId) {
-        Page<Brand> result = brandRepository.findAll(
-                PageRequest.of(pageId, 40)
-        );
-        return result.getContent();
+    // BRAND
+    public List<Brand> showBrands() {
+        return (List<Brand>) brandRepository.findAll();
+    }
+
+    // PRODUCT
+    public Integer showProductCount() {
+        return productRepository.getProductCount();
     }
 
     public List<Product> showProducts(int pageId) {

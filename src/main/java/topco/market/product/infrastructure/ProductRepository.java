@@ -9,8 +9,11 @@ import topco.market.product.domain.Product;
 
 public interface ProductRepository extends CrudRepository<Product, String>, PagingAndSortingRepository<Product, String> {
 
-    @Query("select next value for S_PRODUCT_NUMBER from DUAL_PRODUCT_NUMBER")
-    Long getProductIdFromSequenceTable();
+    @Query("select count(*) from Product")
+    Integer getProductCount();
+
+    @Query(value = "SELECT next value for S_PRODUCT_NUMBER", nativeQuery = true)
+    Long getNextProductNumber();
 
     @Query("select p from Product p where p.category.id = ?1")
     Page<Product> findByCategory(String categoryId, PageRequest pageRequest);

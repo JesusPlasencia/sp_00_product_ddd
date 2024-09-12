@@ -16,7 +16,7 @@ public class RegisteringService {
     }
 
     private String getNextProductNumber() {
-        Long productNumber = productRepository.getProductIdFromSequenceTable();
+        Long productNumber = productRepository.getNextProductNumber();
         return String.format("%06X", productNumber);
     }
 
