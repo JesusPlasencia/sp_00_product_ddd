@@ -1,4 +1,4 @@
-package topco.market.product.presentation.model;
+package topco.market.order.controller.model;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package topco.market.product.domain;
+package topco.market.order.domain;
 
 public class Link {
 

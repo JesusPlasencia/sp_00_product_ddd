@@ -1,8 +1,8 @@
-package topco.market.product.application;
+package topco.market.order.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import topco.market.product.infrastructure.ProductRepository;
+import topco.market.order.repository.ProductRepository;
 
 @Service
 @RequiredArgsConstructor

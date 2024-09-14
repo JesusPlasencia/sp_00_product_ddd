@@ -1,18 +1,8 @@
 package topco.market;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import topco.market.product.domain.Brand;
-import topco.market.product.domain.Category;
-import topco.market.product.domain.Product;
-import topco.market.product.infrastructure.BrandRepository;
-import topco.market.product.infrastructure.CategoryRepository;
-import topco.market.product.infrastructure.ProductRepository;
 
-import java.math.BigDecimal;
-import java.util.NoSuchElementException;
 import java.util.logging.Logger;
 
 @SpringBootApplication

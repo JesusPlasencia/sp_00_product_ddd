@@ -1,4 +1,4 @@
-package topco.market.product.presentation;
+package topco.market.order.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import topco.market.product.application.ListingService;
-import topco.market.product.domain.Category;
-import topco.market.product.presentation.model.Items;
+import topco.market.order.service.ListingService;
+import topco.market.order.domain.Category;
+import topco.market.order.controller.model.Items;
 
 import java.util.List;
 
